@@ -297,7 +297,7 @@
 
         <div class="faq-item reveal" id="faq-2">
           <button class="faq-question">
-            Why does macOS say the app is "damaged" or from an "unidentified developer"?
+            macOS says the app is from an "unidentified developer". What do I do?
             <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -305,22 +305,11 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              Since PureRate is an open-source tool distributed outside the App Store without Apple's paid signature,
-              macOS applies a "quarantine" flag that may trigger a "damaged" error.
+              Since PureRate is distributed outside the Mac App Store, Gatekeeper may block it the first time.
               <br /><br />
-              <strong>Simple Fix:</strong>
-              <ol style="margin-left: 20px; margin-top: 10px;">
-                <li>Drag PureRate to your Applications folder.</li>
-                <li>Open <strong>Terminal.app</strong> (Command + Space, type Terminal).</li>
-                <li>Paste this command and press Enter: <br />
-                  <code
-                    style="background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 5px;">xattr -cr /Applications/PureRate.app</code>
-                </li>
-              </ol>
-              <br />
-              This removes the internet quarantine flag and allows the app to run perfectly.
-              Alternatively, you can go to <strong>System Settings → Privacy & Security</strong> and click <em>"Open
-                Anyway"</em>.
+              <strong>Fix:</strong> Right-click (or Control-click) the app → choose <em>Open</em> → click <em>Open</em>
+              again in the dialog. You only need to do this once. Alternatively, go to <strong>System Settings → Privacy
+                & Security</strong> and click <em>"Open Anyway"</em> next to the PureRate warning.
             </div>
           </div>
         </div>
