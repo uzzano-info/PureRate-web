@@ -305,19 +305,16 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              Since PureRate is an open-source tool without a paid Apple Developer certificate, macOS Gatekeeper blocks
-              it after downloading.
+              Since PureRate is an open-source app distributed outside the Mac App Store, Gatekeeper may flag it upon
+              download.
               <br /><br />
-              <strong>If it says "unidentified developer":</strong> Right-click the app → choose <em>Open</em> → click
-              <em>Open</em> again.
+              <strong>Fix 1 ("Unidentified Developer"):</strong> Right-click (or Control-click) the app → choose
+              <em>Open</em>. Alternatively, go to <strong>System Settings → Privacy & Security</strong> and click
+              <em>"Open Anyway"</em>.
               <br /><br />
-              <strong>If it says "app is damaged and can't be opened":</strong> Open your <strong>Terminal</strong> app
-              and paste the following command to remove the quarantine flag:
-              <br />
-              <code
-                style="display:block; padding: 10px; margin-top: 8px; background: rgba(255,255,255,0.1); border-radius: 6px;">xattr -cr /Applications/PureRate.app</code>
-              <br />
-              Then open the app normally.
+              <strong>Fix 2 ("App is damaged"):</strong> If macOS says the app must be moved to Trash, open the Terminal
+              app and run this command to remove the quarantine flag:
+              <br /><code>xattr -cr /Applications/PureRate.app</code>
             </div>
           </div>
         </div>
