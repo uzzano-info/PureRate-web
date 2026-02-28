@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 export default defineConfig({
     // Serve the root of the project as static files
     root: '.',
-    publicDir: 'public',
     build: {
         outDir: 'dist',
         // Copy the DMG if present
