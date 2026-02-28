@@ -1,15 +1,15 @@
 {
   "headers": [
     {
-      "source": "/(.*).dmg",
+      "source": "/PureRate.dmg",
       "headers": [
         {
           "key": "Content-Disposition",
-          "value": "attachment"
+          "value": "attachment; filename=\"PureRate.dmg\""
         },
         {
           "key": "Content-Type",
-          "value": "application/octet-stream"
+          "value": "application/x-apple-diskimage"
         }
       ]
     }
