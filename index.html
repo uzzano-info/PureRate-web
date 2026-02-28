@@ -117,7 +117,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
           </svg>
-          macOS says "damaged"? Run <code>xattr -cr /Applications/PureRate.app</code> in Terminal. <a href="#faq">Why?</a>
+          macOS security warning? Run <code>xattr -cr /Applications/PureRate.app</code> in Terminal. <a href="#faq">Why?</a>
         </p>
 
         <div class="hero-meta">
@@ -303,7 +303,7 @@
 
         <div class="faq-item reveal" id="faq-2">
           <button class="faq-question">
-            macOS says the app is "damaged" or from an "unidentified developer".
+            macOS shows a security warning when opening PureRate.
             <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -311,16 +311,27 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              Since PureRate is an open-source app distributed outside the Mac App Store, Gatekeeper may flag it upon
-              download.
+              PureRate is a free, open-source app distributed outside the Mac App Store. macOS Gatekeeper will block it
+              with a dialog like:
               <br /><br />
-              <strong>Fix 1 ("Unidentified Developer"):</strong> Right-click (or Control-click) the app → choose
-              <em>Open</em>. Alternatively, go to <strong>System Settings → Privacy & Security</strong> and click
-              <em>"Open Anyway"</em>.
+              <em>"Apple은 'PureRate.app'에 사용자의 Mac에 손상을 입히거나 사용자의 개인정보에 침입할 수 있는 악성
+              코드가 없음을 확인할 수 없습니다."</em>
               <br /><br />
-              <strong>Fix 2 ("App is damaged"):</strong> If macOS says the app must be moved to Trash, open the Terminal
-              app and run this command to remove the quarantine flag:
+              This is expected — PureRate is safe. Here's how to fix it:
+              <br /><br />
+              <strong>Step 1.</strong> In the dialog, click <strong>완료 (Done)</strong> — do <em>not</em> click
+              "휴지통으로 이동 (Move to Trash)".
+              <br />
+              <strong>Step 2.</strong> Drag PureRate.app to your Applications folder as usual.
+              <br />
+              <strong>Step 3.</strong> Open Terminal (⌘ Space → type <em>Terminal</em> → Enter) and run:
               <br /><code>xattr -cr /Applications/PureRate.app</code>
+              <br />
+              <strong>Step 4.</strong> Open PureRate normally.
+              <br /><br />
+              <strong>Alternative (no Terminal):</strong> After step 1–2, go to
+              <strong>System Settings → Privacy &amp; Security</strong>, scroll down, and click
+              <em>"Open Anyway"</em> next to PureRate.
             </div>
           </div>
         </div>
